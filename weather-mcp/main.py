@@ -238,7 +238,7 @@ async def call_weather_api(endpoint: str, params: Dict[str, Any]) -> WeatherResp
             raise ValueError(f"예상치 못한 오류: {str(e)}")
 
 
-@mcp.resource()
+@mcp.tool()
 def get_current_datetime() -> CurrentDateTime:
     """현재 날짜와 시간을 반환합니다."""
     now = datetime.now()
@@ -418,7 +418,7 @@ async def get_vilage_fcst(
         )
 
 
-@mcp.resource()
+@mcp.tool()
 def get_grid_coordinates_info() -> Dict[str, Any]:
     """
     격자 좌표 변환 정보와 주요 지역의 격자 좌표를 제공합니다.
